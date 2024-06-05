@@ -2,7 +2,7 @@
 
 
 #include<stdio.h>
-
+#include<conio.h>
 int main()
 {
     int A[20], N, sum = 0, i, j, length = 0;
@@ -32,4 +32,6 @@ int main()
         printf("%d\n", length);
     else
         printf("No Substring with sum 0");
+    
+    getch();
 }   
