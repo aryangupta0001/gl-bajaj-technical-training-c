@@ -1,3 +1,6 @@
+// WAP to find the first subarray with sum = 0, print its  length also.
+
+
 #include<stdio.h>
 
 int main()
@@ -10,21 +13,23 @@ int main()
         scanf("%d", &A[i]);
     
     for(i = 0; i<N; i++)
-    {   sum = A[i];
+    {   sum = 0;
         length = 0;
-        for(j = i; j<N; j++)
-        {
-            sum+=A[j];
-            if(sum == 0)
-            {
-                length++;
-            }
-            else
-                if(length>0)
-                    break;
-        }
 
-        if(length)
-            printf("%d\n", length);
+        for(j = i; j<N; j++)
+        {   sum+=A[j];
+            length++;
+
+            if(sum == 0)
+                break;
+        }
+        
+        if(length && !sum)
+            break;
     }
+
+    if(length && !sum)
+        printf("%d\n", length);
+    else
+        printf("No Substring with sum 0");
 }   
