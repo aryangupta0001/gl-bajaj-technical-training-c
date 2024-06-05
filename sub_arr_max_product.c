@@ -3,7 +3,7 @@
 #include <stdio.h>
 int main()
 {
-    int A[20], N, i, j, product, maxProduct = 1;
+    int A[20], N, i, j, product, maxProduct = 0;
 
     scanf("%d", &N);
 
