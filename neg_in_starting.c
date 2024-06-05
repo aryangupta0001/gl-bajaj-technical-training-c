@@ -4,7 +4,7 @@
 
 int main()
 {
-    int A[20], N, i, j, k = 0, temp;
+    int A[20], N, i, k = 0, temp;
 
     scanf("%d", &N);
 
@@ -13,12 +13,9 @@ int main()
 
 
     for(i = 1; i<N; i++)
-    {
         if(A[i]<0)
-        {   printf("k = %d\t", k);
             while(k<i)
-            {
-                if(A[k]>=0)
+            {   if(A[k]>=0)
                 {   temp = A[k];
                     A[k] = A[i];
                     A[i] = temp;
@@ -26,10 +23,7 @@ int main()
                     break;
                 }
                 k++;
-            }   
-        }
-        
-    }
+            }
 
     printf("\n");
 
